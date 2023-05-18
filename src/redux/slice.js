@@ -3,26 +3,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const todosSlice = createSlice({
   name: "todos",
   initialState: {
-    items: [
-      {
-        id: 1,
-        name: "React",
-      },
-      {
-        id: 2,
-        name: "Spor",
-      },
-      {
-        id: 3,
-        name: "Kitap",
-      },
-    ],
+    items: [],
   },
   reducers: {
     addTodo: (state, action) => {
       state.items.push(action.payload);
     },
+    delTodo: (state, action) => {
+      state.items = state.items.filter((item) => item.id !== action.payload);
+    },
   },
 });
-export const { addTodo } = todosSlice.actions;
+export const { addTodo, delTodo } = todosSlice.actions;
 export default todosSlice.reducer;
