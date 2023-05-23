@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .App {
   width: 100%;
@@ -9,15 +10,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: gray;
+}
+h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
 }
 .main {
   width: 500px;
   padding: 20px;
+  background-color: white;
+  color: gray;
   box-shadow: 5px 5px 10px black;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 footer {
   display: flex;
